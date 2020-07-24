@@ -2,4 +2,121 @@
   padding: 0;
   margin: 0;
 }
+
+.main__txt--gray {
+  font-family: "Noto Serif", sans-serif;
+  font-size: 90px;
+  color: rgba(23, 23, 23, 0.05);
+  text-align: right;
+}
+
+.header {
+  color: white;
+  background-image: url(img/fv-bgi_01@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 752px;
+  position: relative;
+}
+
+.header__wrap {
+  margin: 0 8.3%;
+}
+
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 96px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.header__ttl {
+  font-size: 26px;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__item {
+  color: white;
+  list-style: none;
+}
+
+.nav__item a {
+  text-decoration: none;
+}
+
+.nav__item a:link, .nav__item a:visited, .nav__item a:hover, .nav__item a:active {
+  color: white;
+}
+
+.nav__item + .nav__item {
+  padding-left: 30px;
+}
+
+.fv {
+  position: absolute;
+  top: 37.3%;
+}
+
+.fv__ttl {
+  font-size: 70px;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.fv__txt {
+  font-size: 40px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.concept__wrap {
+  margin: 0 8.3%;
+}
+
+.concept__ttl {
+  font-size: 50px;
+  color: #282f35;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.concept__txt {
+  font-size: 30px;
+  color: #171717;
+  text-align: center;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.concept__left {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.concept__flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.concept__left {
+  height: 240px;
+  width: 440px;
+  font-size: 16px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
 /*# sourceMappingURL=style.css.map */

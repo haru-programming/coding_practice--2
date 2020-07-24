@@ -1,4 +1,131 @@
+//変数管理
+
+//font-family
+$font-en: "Noto Serif", sans-serif;
+$font-jp: "Noto Serif JP", sans-serif;
+
+//color
+$main-color: rgb(23, 23, 23);
+
+//全体の設定
 * {
   padding: 0;
   margin: 0;
+}
+
+//共通コンポーネント
+.main {
+  &__txt--gray {
+    font-family: $font-en;
+    font-size: 90px;
+    color: rgba(23, 23, 23, 0.05);
+    text-align: right;
+  }
+}
+
+//ここからヘッダー
+.header {
+  color: white;
+  background-image: url(img/fv-bgi_01@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 752px;
+  position: relative;
+
+  &__wrap {
+    margin: 0 8.3%;
+  }
+
+  &__top {
+    display: flex;
+    height: 96px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-en;
+  }
+
+  &__ttl {
+    font-size: 26px;
+  }
+}
+
+//ここからnav
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    color: white;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        color: white;
+      }
+    }
+  }
+
+  &__item + &__item {
+    padding-left: 30px;
+  }
+}
+
+//ここからファーストビューの文字
+.fv {
+  position: absolute;
+  top: 37.3%;
+
+  &__ttl {
+    font-size: 70px;
+    font-family: $font-en;
+  }
+
+  &__txt {
+    font-size: 40px;
+    font-family: $font-jp;
+  }
+}
+
+//ここからメイン > コンセプト
+.concept {
+  &__wrap {
+    margin: 0 8.3%;
+  }
+
+  &__ttl {
+    font-size: 50px;
+    color: #282f35;
+    font-family: $font-en;
+  }
+
+  &__txt {
+    font-size: 30px;
+    color: #171717;
+    text-align: center;
+    font-family: $font-jp;
+  }
+
+  &__left {
+    font-family: $font-jp;
+  }
+
+  &__flexbox {
+    display: flex;
+    width: 100%;
+  }
+
+  &__left {
+    height: 240px;
+    width: 440px;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+  }
 }
