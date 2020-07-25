@@ -11,16 +11,73 @@ $main-color: rgb(23, 23, 23);
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-//共通コンポーネント
-.main {
-  &__txt--gray {
+//共通ボタン
+.btn {
+  &__txt {
+    font-size: 16px;
+    font-weight: bold;
     font-family: $font-en;
-    font-size: 90px;
-    color: rgba(23, 23, 23, 0.05);
-    text-align: right;
   }
+  &--yellow {
+    padding: 19px 71px 18px 71px;
+    background-color: #f7d43f;
+    box-shadow: 0 0 6px #1b1310;
+    border-radius: 51px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: $font-en;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+//共通section > ttlのボーター部分 ex.)news---
+.main {
+  &__flex {
+    display: flex;
+    align-items: center;
+    height: 82px;
+    padding-top: 104px;
+
+    //黒字の場合のボーダー
+    &--right {
+      border-top: 5px solid #282f35;
+      width: 200px;
+    }
+    //白地の場合のボーダー
+    &--right2 {
+      border-top: 5px solid white;
+      width: 200px;
+    }
+
+    //worksのflexbox詳細
+    &.--works {
+      justify-content: flex-end;
+      margin-right: -8.2%;
+    }
+
+    //serviceのflexbox詳細
+    &.--service {
+      margin-left: 15.2%;
+      padding-bottom: 80px;
+    }
+
+    //conceptのflexbox詳細
+    &.--contact {
+      justify-content: flex-end;
+    }
+  }
+}
+
+//共通画面
+body {
+  width: 100%;
+  max-width: 100%;
 }
 
 //ここからヘッダー
@@ -43,6 +100,13 @@ $main-color: rgb(23, 23, 23);
     justify-content: space-between;
     align-items: center;
     font-family: $font-en;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 8.3%;
+    font-weight: bold;
+    font-style: italic;
   }
 
   &__ttl {
@@ -80,7 +144,7 @@ $main-color: rgb(23, 23, 23);
 //ここからファーストビューの文字
 .fv {
   position: absolute;
-  top: 37.3%;
+  top: 51%;
 
   &__ttl {
     font-size: 70px;
@@ -96,13 +160,15 @@ $main-color: rgb(23, 23, 23);
 //ここからメイン > コンセプト
 .concept {
   &__wrap {
-    margin: 0 8.3%;
+    margin: 0 15.2% 0 15.2%;
   }
 
   &__ttl {
     font-size: 50px;
     color: #282f35;
     font-family: $font-en;
+    font-style: italic;
+    padding-right: 30px;
   }
 
   &__txt {
@@ -110,15 +176,22 @@ $main-color: rgb(23, 23, 23);
     color: #171717;
     text-align: center;
     font-family: $font-jp;
-  }
+    padding-top: 70px;
 
-  &__left {
-    font-family: $font-jp;
+    &--gray {
+      font-family: $font-en;
+      font-size: 90px;
+      color: rgba(23, 23, 23, 0.05);
+      text-align: right;
+      margin-right: -88px;
+      padding-top: 70px;
+    }
   }
 
   &__flexbox {
     display: flex;
     width: 100%;
+    padding-top: 60px;
   }
 
   &__left {
@@ -127,5 +200,187 @@ $main-color: rgb(23, 23, 23);
     font-size: 16px;
     display: grid;
     place-items: center;
+    padding-right: 130px;
+    font-family: $font-jp;
+    line-height: 2;
+    font-weight: bold;
+  }
+}
+
+//ここからメイン > ワーク
+.works {
+  background-image: url(img/works-bgi@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: 70px;
+
+  &__wrap {
+    margin: 0 15.2% 0 15.2%;
+  }
+
+  &__ttl {
+    color: white;
+    font-family: $font-en;
+    font-size: 50px;
+    font-style: italic;
+    text-align: right;
+    padding-right: 48px;
+    letter-spacing: 0.1em;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__item {
+    border: 1px solid #282f35;
+    max-width: 320px;
+    box-shadow: 0 0 6px black;
+    font-family: $font-jp;
+    font-size: 16px;
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+
+  &__txt {
+    background-color: white;
+    padding: 25px 20px;
+    letter-spacing: 0.05em;
+
+    &--center {
+      padding: 25px 20px 48px 20px;
+      background-color: white;
+      letter-spacing: 0.05em;
+    }
+
+    &--gray {
+      padding-top: 70px;
+      text-align: left;
+      font-size: 90px;
+      color: rgba(255, 255, 255, 0.1);
+      font-family: $font-en;
+      margin-left: -9.8%;
+      padding-bottom: 70px;
+    }
+  }
+}
+
+//ここからメイン > サービス
+.service {
+  &__wrap {
+    width: 100%;
+  }
+
+  &__ttl {
+    font-size: 50px;
+    color: #282f35;
+    font-family: $font-en;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    padding-right: 29px;
+  }
+
+  &__flex {
+    display: flex;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__txt {
+    position: absolute;
+    top: 130px;
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+    font-family: $font-en;
+
+    &--gray {
+      font-family: $font-en;
+      font-size: 90px;
+      color: rgba(23, 23, 23, 0.05);
+      text-align: right;
+      margin-right: 8.2%;
+      padding-top: 70px;
+    }
+
+    &.left {
+      left: 135px;
+    }
+
+    &.center {
+      left: 630px;
+    }
+
+    &.right {
+      left: 1100px;
+    }
+  }
+}
+
+//ここからメイン > コンタクト
+.contact {
+  margin-top: 70px;
+  background-image: url(img/contact-bgi@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  &__wrap {
+    margin: 0 8.2%;
+  }
+
+  &__ttl {
+    color: white;
+    font-size: 50px;
+    font-style: italic;
+    font-family: $font-en;
+    text-align: right;
+    letter-spacing: 0.1em;
+    padding-right: 30px;
+  }
+
+  &__txt {
+    color: white;
+    font-family: $font-jp;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    &--gray {
+      padding-top: 70px;
+      text-align: left;
+      font-size: 90px;
+      color: rgba(255, 255, 255, 0.1);
+      font-family: $font-en;
+    }
+  }
+}
+
+//ここからフッター
+.footer {
+  &__wrap {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &__txt {
+    color: #282f35;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: $font-en;
   }
 }
