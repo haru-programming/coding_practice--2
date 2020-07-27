@@ -1,0 +1,154 @@
+//変数管理
+
+//font-family
+$font-en: "Noto Serif", sans-serif;
+$font-jp: "Noto Serif JP", sans-serif;
+
+//全体の設定
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//共通ボタン
+.btn {
+  &__txt {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $font-en;
+  }
+  &--yellow {
+    padding: 19px 71px 18px 71px;
+    background-color: #f7d43f;
+    box-shadow: 0 0 6px #1b1310;
+    border-radius: 51px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: $font-en;
+    border: solid 1px #f7d43f;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+//共通画面
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+//ここからヘッダー
+.header {
+  background-image: url(../img/contact-page-bgi@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 453px;
+  color: white;
+  position: absolute;
+
+  &__wrap {
+    margin: 0 8.3%;
+  }
+  &__top {
+    display: flex;
+    height: 96px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-en;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 0 8.3%;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  &__ttl {
+    font-size: 26px;
+  }
+}
+
+//ここからnav
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    color: white;
+    list-style: none;
+    a {
+      text-decoration: none;
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        color: white;
+      }
+    }
+  }
+  &__item + &__item {
+    padding-left: 30px;
+  }
+}
+
+//ここからファーストビューの文字
+.fv {
+  position: relative;
+  color: white;
+
+  &__ttl {
+    font-size: 70px;
+    font-family: $font-en;
+    left: 50%;
+    text-align: center;
+    padding-top: 170px;
+    font-style: italic;
+  }
+
+  &__txt {
+    font-size: 40px;
+    font-family: $font-jp;
+    left: 20%;
+
+    &--gray {
+      text-align: left;
+      font-size: 90px;
+      color: rgba(255, 255, 255, 0.1);
+      font-family: $font-en;
+      padding-bottom: 70px;
+    }
+  }
+}
+
+//ここからメイン
+.contact {
+  &__wrap {
+    font-size: 16px;
+    font-family: $font-jp;
+    text-align: center;
+    width: 700px;
+    height: 629px;
+  }
+}
+
+//ここからフッター
+.footer {
+  &__wrap {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  &__txt {
+    color: #282f35;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: $font-en;
+  }
+}

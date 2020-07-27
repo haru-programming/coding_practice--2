@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn__txt {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.btn--yellow {
+  padding: 19px 71px 18px 71px;
+  background-color: #f7d43f;
+  -webkit-box-shadow: 0 0 6px #1b1310;
+          box-shadow: 0 0 6px #1b1310;
+  border-radius: 51px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Noto Serif", sans-serif;
+  border: solid 1px #f7d43f;
+}
+
+.btn--center {
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+.header {
+  background-image: url(../img/contact-page-bgi@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 453px;
+  color: white;
+  position: absolute;
+}
+
+.header__wrap {
+  margin: 0 8.3%;
+}
+
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 96px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Serif", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 0 8.3%;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.header__ttl {
+  font-size: 26px;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__item {
+  color: white;
+  list-style: none;
+}
+
+.nav__item a {
+  text-decoration: none;
+}
+
+.nav__item a:link, .nav__item a:visited, .nav__item a:hover, .nav__item a:active {
+  color: white;
+}
+
+.nav__item + .nav__item {
+  padding-left: 30px;
+}
+
+.fv {
+  position: relative;
+  color: white;
+}
+
+.fv__ttl {
+  font-size: 70px;
+  font-family: "Noto Serif", sans-serif;
+  left: 50%;
+  text-align: center;
+  padding-top: 170px;
+  font-style: italic;
+}
+
+.fv__txt {
+  font-size: 40px;
+  font-family: "Noto Serif JP", sans-serif;
+  left: 20%;
+}
+
+.fv__txt--gray {
+  text-align: left;
+  font-size: 90px;
+  color: rgba(255, 255, 255, 0.1);
+  font-family: "Noto Serif", sans-serif;
+  padding-bottom: 70px;
+}
+
+.contact__wrap {
+  font-size: 16px;
+  font-family: "Noto Serif JP", sans-serif;
+  text-align: center;
+  width: 700px;
+  height: 629px;
+}
+
+.footer__wrap {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.footer__txt {
+  color: #282f35;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Noto Serif", sans-serif;
+}
+/*# sourceMappingURL=contact.css.map */

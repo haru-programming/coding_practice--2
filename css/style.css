@@ -20,6 +20,7 @@
   font-weight: bold;
   font-size: 16px;
   font-family: "Noto Serif", sans-serif;
+  border: solid 1px #f7d43f;
 }
 
 .btn--center {
@@ -99,10 +100,17 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   padding: 0 8.3%;
   font-weight: bold;
   font-style: italic;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header__top.transform {
+  background-color: #282f35;
 }
 
 .header__ttl {
@@ -201,7 +209,7 @@ body {
 }
 
 .works {
-  background-image: url(img/works-bgi@2x.jpg);
+  background-image: url(../img/works-bgi@2x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -294,6 +302,19 @@ body {
   width: 100%;
 }
 
+.service__img {
+  vertical-align: bottom;
+  background-color: #171717;
+  width: 480px;
+  height: 320px;
+}
+
+.service__img img:hover {
+  opacity: 0.3;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
 .service__txt {
   position: absolute;
   top: 130px;
@@ -326,11 +347,11 @@ body {
 
 .contact {
   margin-top: 70px;
-  background-image: url(img/contact-bgi@2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 100%;
+  background-image: url(../img/contact-bgi@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact__wrap {
