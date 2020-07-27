@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script type="text/javascript" src="js/fixed-header.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
   </head>
 
   <body>
@@ -111,18 +115,24 @@
           </div>
           <div class="service__flex">
             <div class="service__flex--left">
-              <img src="img/service-img01@2x.jpg" alt="PCを開く男性の画像" />
+              <div class="service__img">
+                <img src="img/service-img01@2x.jpg" alt="PCを開く男性の画像" />
+              </div>
               <p class="service__txt left">Hearing</p>
             </div>
             <div class="service__flex--center">
-              <img
-                src="img/service-img02@2x.jpg"
-                alt="会議をしている様子の画像"
-              />
+              <div class="service__img">
+                <img
+                  src="img/service-img02@2x.jpg"
+                  alt="会議をしている様子の画像"
+                />
+              </div>
               <p class="service__txt center">Planning</p>
             </div>
             <div class="service__flex--right">
-              <img src="img/sevice-img03@2x.jpg" alt="会議する2人の画像" />
+              <div class="service__img">
+                <img src="img/sevice-img03@2x.jpg" alt="会議する2人の画像" />
+              </div>
               <p class="service__txt right">Direction</p>
             </div>
           </div>
