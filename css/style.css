@@ -5,6 +5,11 @@
           box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
 .btn__txt {
   font-size: 16px;
   font-weight: bold;
@@ -66,19 +71,20 @@
           justify-content: flex-end;
 }
 
-body {
-  width: 100%;
-  max-width: 100%;
-}
-
 .header {
   color: white;
-  background-image: url(img/fv-bgi_01@2x.jpg);
+  background-image: url(../img/fv-bgi_01@2x.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
   height: 752px;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    background-size: auto 599px;
+  }
 }
 
 .header__wrap {
@@ -143,9 +149,68 @@ body {
   padding-left: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
+
+.nav2 {
+  display: none;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__toggle {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 16px;
+  }
+}
+
+.nav__toggle i {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.nav__toggle i:nth-child(1) {
+  top: 0;
+}
+
+.nav__toggle i:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.nav__toggle i:nth-child(3) {
+  bottom: 0;
+}
+
 .fv {
   position: absolute;
   top: 51%;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .fv {
+    top: 30%;
+    left: 28%;
+  }
 }
 
 .fv__ttl {
@@ -153,9 +218,28 @@ body {
   font-family: "Noto Serif", sans-serif;
 }
 
+@media screen and (max-width: 767px) {
+  .fv__ttl {
+    font-size: 37px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+}
+
 .fv__txt {
   font-size: 40px;
   font-family: "Noto Serif JP", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .fv__txt {
+    font-size: 30px;
+    padding-top: 59px;
+    padding-left: 36px;
+    width: 286px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
 }
 
 .concept__wrap {

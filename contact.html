@@ -16,57 +16,79 @@
       <div class="header__wrap">
         <div class="header__top">
           <h1 class="header__ttl">Cresta Design</h1>
-            <!-- ナビゲーション -->
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item"><a href="#">Concept</a></li>
-                <li class="nav__item"><a href="#">Service</a></li>
-                <li class="nav__item"><a href="#">Works</a></li>
-                <li class="nav__item"><a href="#">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+          <!-- ナビゲーション -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#">Concept</a></li>
+              <li class="nav__item"><a href="#">Service</a></li>
+              <li class="nav__item"><a href="#">Works</a></li>
+              <li class="nav__item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-      </header> <!--/header-->
-        <div class="fv">
-          <p class="fv__ttl">Contact</p>
-          <p class="fv__txt--gray">Contact us</p>
-        </div>
+      </div>
+    </header>
+    <!--/header-->
+    <div class="fv">
+      <p class="fv__ttl">Contact</p>
+      <p class="fv__txt--gray">Contact us</p>
+    </div>
 
     <main class="contact">
       <div class="contact__wrap">
         <h2 class="contact__ttl">お問い合わせ内容</h2>
-        <div class="contact__item">
-          <label for="yourname">担当者名</label> <input id="yourname" type="text" name="yourname"><br>
+        <div class="checkbox">
+          <ul class="checkbox__list">
+            <li class="checkbox__item">
+              <input type="checkbox" name="course" value="document" />資料請求
+            </li>
+            <li class="checkbox__item">
+              <input
+                type="checkbox"
+                name="course"
+                value="phone"
+              />お電話でのご相談を希望
+            </li>
+            <li class="checkbox__item">
+              <input
+                type="checkbox"
+                name="course"
+                value="application"
+              />申し込み
+            </li>
+          </ul>
         </div>
         <div class="contact__item">
-        <label for="tel">電話番号</label> <input id="yourname" type="text" name="tel"><br>
+          <label for="yourname">担当者名</label><br />
+          <input id="yourname" type="text" name="yourname" /><br />
         </div>
         <div class="contact__item">
-          <label for="email">メールアドレス</label> <input id="email" type="text" name="email"><br>
-        </div>
-        
-        <div class="contact__item">
-          <label for="comment">その他</label><br>
+          <label for="tel">電話番号</label><br />
+          <input id="yourname" type="text" name="tel" /><br />
         </div>
         <div class="contact__item">
+          <label for="email">メールアドレス</label><br />
+          <input id="email" type="text" name="email" /><br />
+        </div>
+
+        <div class="contact__item">
+          <label for="comment">その他</label><br />
           <textarea id="comment" name="comment"></textarea>
         </div>
 
+        <div class="btn--center">
+          <button class="btn--yellow">
+            <p class="btn__txt">Submit</p>
+          </button>
+        </div>
       </div>
-
-      <div class="btn--center">
-        <button class="btn--yellow">
-          <p class="btn__txt">Submit</p>
-        </button>
     </main>
 
     <!-- ここからフッター-->
     <footer class="footer">
       <div class="footer__wrap">
         <p class="footer__txt">©︎cresta.design all rights reserved</p>
-       </div>
+      </div>
     </footer>
-
   </body>
 </html>

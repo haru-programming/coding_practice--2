@@ -1,20 +1,44 @@
-//変数管理
+//******変数管理******
 
 //font-family
 $font-en: "Noto Serif", sans-serif;
 $font-jp: "Noto Serif JP", sans-serif;
 
 //color
-$main-color: rgb(23, 23, 23);
+$main-color: #171717;
 
-//全体の設定
+//******レスポンシブ対応******
+//ブレイクポイント
+$mb: 767px;
+
+//@mediaのフォーマット
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
+//画像のレスポンシブ設定
+@mixin img-responsive {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+//******全体の設定******
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-//共通ボタン
+//共通画面
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+//******全ページ共通ボタン******
 .btn {
   &__txt {
     font-size: 16px;
@@ -37,7 +61,7 @@ $main-color: rgb(23, 23, 23);
   }
 }
 
-//共通section > ttlのボーター部分 ex.)news---
+//******共通section > ttlのボーター部分 ex.)news---******
 .main {
   &__flex {
     display: flex;
@@ -75,21 +99,18 @@ $main-color: rgb(23, 23, 23);
   }
 }
 
-//共通画面
-body {
-  width: 100%;
-  max-width: 100%;
-}
-
-//ここからヘッダー
+//******ここからヘッダー******
 .header {
   color: white;
-  background-image: url(img/fv-bgi_01@2x.jpg);
+  background-image: url(../img/fv-bgi_01@2x.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
   height: 752px;
   position: relative;
+  @include mobile {
+    background-size: auto 599px;
+  }
 
   &__wrap {
     margin: 0 8.3%;
@@ -120,7 +141,7 @@ body {
   }
 }
 
-//ここからnav
+//******ここからnav******
 .nav {
   &__list {
     display: flex;
@@ -142,25 +163,86 @@ body {
   &__item + &__item {
     padding-left: 30px;
   }
+
+  @include mobile {
+    display: none;
+  }
 }
 
-//ここからファーストビューの文字
+.nav2 {
+  display: none;
+}
+
+//******ここからスマホ版ハンバーガーメニュー******
+//ハンバーガーの部分
+.nav__toggle {
+  display: none;
+  @include mobile {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 16px;
+  }
+}
+.nav__toggle i {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.nav__toggle i:nth-child(1) {
+  top: 0;
+}
+.nav__toggle i:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.nav__toggle i:nth-child(3) {
+  bottom: 0;
+}
+
+//******ここからファーストビューの文字******
 .fv {
   position: absolute;
   top: 51%;
+  font-weight: bold;
+  @include mobile {
+    top: 30%;
+    left: 28%;
+  }
 
   &__ttl {
     font-size: 70px;
     font-family: $font-en;
+    @include mobile {
+      font-size: 37px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
   }
 
   &__txt {
     font-size: 40px;
     font-family: $font-jp;
+    @include mobile {
+      font-size: 30px;
+      padding-top: 59px;
+      padding-left: 36px;
+      width: 286px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
   }
 }
 
-//ここからメイン > コンセプト
+//******ここからメイン > コンセプト******
 .concept {
   &__wrap {
     margin: 0 15.2% 0 15.2%;
@@ -210,7 +292,7 @@ body {
   }
 }
 
-//ここからメイン > ワーク
+//******ここからメイン > ワーク******
 .works {
   background-image: url(../img/works-bgi@2x.jpg);
   background-repeat: no-repeat;
@@ -276,7 +358,7 @@ body {
   }
 }
 
-//ここからメイン > サービス
+//******ここからメイン > サービス******
 .service {
   &__wrap {
     width: 100%;
@@ -344,7 +426,8 @@ body {
     }
   }
 }
-//ここからメイン > コンタクト
+
+//******ここからメイン > コンタクト******
 .contact {
   margin-top: 70px;
   width: 100%;
@@ -386,7 +469,7 @@ body {
   }
 }
 
-//ここからフッター
+//******ここからフッター******
 .footer {
   &__wrap {
     text-align: center;
