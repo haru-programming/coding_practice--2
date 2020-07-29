@@ -10,21 +10,18 @@ body {
   max-width: 100%;
 }
 
-.btn__txt {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Noto Serif", sans-serif;
-}
-
-.btn--yellow {
+.btn {
   padding: 19px 71px 18px 71px;
-  background-color: #f7d43f;
   -webkit-box-shadow: 0 0 6px #1b1310;
           box-shadow: 0 0 6px #1b1310;
   border-radius: 51px;
   font-weight: bold;
   font-size: 16px;
   font-family: "Noto Serif", sans-serif;
+}
+
+.btn--yellow {
+  background-color: #f7d43f;
   border: solid 1px #f7d43f;
 }
 
@@ -83,6 +80,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .header {
+    background-position-x: center;
     background-size: auto 599px;
   }
 }
@@ -209,7 +207,7 @@ body {
 @media screen and (max-width: 767px) {
   .fv {
     top: 30%;
-    left: 28%;
+    left: 20%;
   }
 }
 

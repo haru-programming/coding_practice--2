@@ -40,19 +40,15 @@ body {
 
 //******全ページ共通ボタン******
 .btn {
-  &__txt {
-    font-size: 16px;
-    font-weight: bold;
-    font-family: $font-en;
-  }
+  padding: 19px 71px 18px 71px;
+  box-shadow: 0 0 6px #1b1310;
+  border-radius: 51px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $font-en;
+
   &--yellow {
-    padding: 19px 71px 18px 71px;
     background-color: #f7d43f;
-    box-shadow: 0 0 6px #1b1310;
-    border-radius: 51px;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: $font-en;
     border: solid 1px #f7d43f;
   }
 
@@ -109,6 +105,7 @@ body {
   height: 752px;
   position: relative;
   @include mobile {
+    background-position-x: center;
     background-size: auto 599px;
   }
 
@@ -215,7 +212,7 @@ body {
   font-weight: bold;
   @include mobile {
     top: 30%;
-    left: 28%;
+    left: 20%;
   }
 
   &__ttl {

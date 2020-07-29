@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="jn">
+<html lang="ja" prefix="og: https://cresta.design.com#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cresta Design</title>
+    <meta
+      name="”description”"
+      content="オフィスに特化した空間デザインなら株式会社CrestaDesignにお任せください。
+    「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」そんなコンセプトをもとに空間デザインを提供させていただきます。"
+    />
+    <!--ここからOGP-->
+    <meta property="og:url" content=" https://cresta.design.comL" />
+    <meta property="og:type" content=" website" />
+    <meta property="og:title" content=" Cresta Design" />
+    <meta
+      property="og:description"
+      content=" オフィスに特化した空間デザインなら株式会社CrestaDesignにお任せください。
+      「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」そんなコンセプトをもとに空間デザインを提供させていただきます。"
+    />
+    <meta property="og:site_name" content="Cresta Design" />
+    <meta property="og:image" content=" img/concept-image@2x.jpg" />
+    <!--OGPここまで-->
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/jquery.bgswitcher.js"></script>
-    <script type="text/javascript" src="js/fixed-header.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
   </head>
 
   <body>
@@ -74,7 +87,7 @@
               Designだからこそできる空間デザインを提供させていただきます。
             </p>
             <img src="img/concept-image@2x.jpg" alt="オフィスの写真" /
-            class="concept-right">
+            class="concept-right" width="440px" height="240px">
           </div>
           <p class="concept__txt--gray">Our Concept</p>
         </div>
@@ -111,7 +124,7 @@
             </li>
           </ul>
           <div class="btn--center">
-            <button class="btn--yellow">
+            <button class="btn btn--yellow">
               <p class="btn__txt">View more</p>
             </button>
           </div>
@@ -130,7 +143,12 @@
           <div class="service__flex">
             <div class="service__flex--left">
               <div class="service__img">
-                <img src="img/service-img01@2x.jpg" alt="PCを開く男性の画像" />
+                <img
+                  src="img/service-img01@2x.jpg"
+                  alt="PCを開く男性の画像"
+                  width="480px"
+                  height="320px"
+                />
               </div>
               <p class="service__txt left">Hearing</p>
             </div>
@@ -139,13 +157,20 @@
                 <img
                   src="img/service-img02@2x.jpg"
                   alt="会議をしている様子の画像"
+                  width="480px"
+                  height="320px"
                 />
               </div>
               <p class="service__txt center">Planning</p>
             </div>
             <div class="service__flex--right">
               <div class="service__img">
-                <img src="img/sevice-img03@2x.jpg" alt="会議する2人の画像" />
+                <img
+                  src="img/sevice-img03@2x.jpg"
+                  alt="会議する2人の画像"
+                  width="480px"
+                  height="320px"
+                />
               </div>
               <p class="service__txt right">Direction</p>
             </div>
@@ -166,7 +191,7 @@
           <div class="btn--center">
             <button
               onclick="location.href='./contact.html'"
-              class="btn--yellow"
+              class="btn btn--yellow"
             >
               <p class="btn__txt">Contact</p>
             </button>
@@ -175,11 +200,17 @@
         </div>
       </section>
     </main>
+    <!-- ここからフッター-->
+    <footer class="footer">
+      <div class="footer__wrap">
+        <p class="footer__txt">©︎cresta.design all rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script type="text/javascript" src="js/fixed-header.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
   </body>
-  <!-- ここからフッター-->
-  <footer class="footer">
-    <div class="footer__wrap">
-      <p class="footer__txt">©︎cresta.design all rights reserved</p>
-    </div>
-  </footer>
 </html>
