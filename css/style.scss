@@ -59,22 +59,28 @@ body {
 
 //******共通section > ttlのボーター部分 ex.)news---******
 .main {
+  @include mobile {
+    overflow: hidden;
+  }
+  //ボーダーの長さ
+  &__right {
+    width: 200px;
+
+    //黒字のボーダー
+    &.borderBlack {
+      border-top: 5px solid #282f35;
+    }
+    //白字のボーター
+    &.borderWhite {
+      border-top: 5px solid white;
+    }
+  }
+
   &__flex {
     display: flex;
     align-items: center;
     height: 82px;
     padding-top: 104px;
-
-    //黒字の場合のボーダー
-    &--right {
-      border-top: 5px solid #282f35;
-      width: 200px;
-    }
-    //白地の場合のボーダー
-    &--right2 {
-      border-top: 5px solid white;
-      width: 200px;
-    }
 
     //worksのflexbox詳細
     &.--works {
@@ -95,18 +101,50 @@ body {
   }
 }
 
+//****** 共通section > grayの飾り文字 ******
+
+.main {
+  &__txt {
+    font-family: $font-en;
+    font-size: 90px;
+    color: rgba(23, 23, 23, 0.05);
+    text-align: right;
+    padding-top: 70px;
+
+    &.--right {
+      margin-right: -88px;
+    }
+
+    &.--right2 {
+      margin-right: 8.2%;
+    }
+
+    &.--left {
+      text-align: left;
+      margin-left: -9.8%;
+      color: rgba(255, 255, 255, 0.1);
+    }
+
+    &.--left2 {
+      color: rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+  }
+}
+
 //******ここからヘッダー******
 .header {
   color: white;
+  width: 100%;
+  height: 752px;
   background-image: url(../img/fv-bgi_01@2x.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 752px;
   position: relative;
   @include mobile {
     background-position-x: center;
-    background-size: auto 599px;
+    background-size: cover;
+    height: 599px;
   }
 
   &__wrap {
@@ -208,41 +246,56 @@ body {
 //******ここからファーストビューの文字******
 .fv {
   position: absolute;
-  top: 51%;
   font-weight: bold;
+  top: 50%;
+  color: white;
   @include mobile {
-    top: 30%;
-    left: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
   }
 
   &__ttl {
     font-size: 70px;
     font-family: $font-en;
+    padding-left: 120px;
+    letter-spacing: 0.05em;
     @include mobile {
-      font-size: 37px;
+      font-size: 9.8vw;
       text-align: center;
-      letter-spacing: 0.05em;
+      padding-left: 0;
     }
   }
 
   &__txt {
     font-size: 40px;
     font-family: $font-jp;
+    padding-left: 140px;
+    letter-spacing: 0.05em;
     @include mobile {
-      font-size: 30px;
-      padding-top: 59px;
-      padding-left: 36px;
-      width: 286px;
+      font-size: 8vw;
+      padding-top: 32px;
+      padding-left: 0;
       text-align: center;
-      letter-spacing: 0.05em;
     }
+  }
+}
+//spのみ&__textに改行を入れる
+.br-sp {
+  display: none;
+  @include mobile {
+    display: block;
   }
 }
 
 //******ここからメイン > コンセプト******
 .concept {
   &__wrap {
-    margin: 0 15.2% 0 15.2%;
+    margin: 0 15.2%;
+    @include mobile {
+      margin: 0 7.2%;
+    }
   }
 
   &__ttl {
@@ -251,6 +304,11 @@ body {
     font-family: $font-en;
     font-style: italic;
     padding-right: 30px;
+    @include mobile {
+      font-size: 30px;
+      font-weight: bold;
+      font-style: italic;
+    }
   }
 
   &__txt {
@@ -259,14 +317,10 @@ body {
     text-align: center;
     font-family: $font-jp;
     padding-top: 70px;
-
-    &--gray {
-      font-family: $font-en;
-      font-size: 90px;
-      color: rgba(23, 23, 23, 0.05);
-      text-align: right;
-      margin-right: -88px;
-      padding-top: 70px;
+    @include mobile {
+      font-size: 20px;
+      font-weight: bold;
+      width: 336px;
     }
   }
 
@@ -274,6 +328,9 @@ body {
     display: flex;
     width: 100%;
     padding-top: 60px;
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -286,6 +343,10 @@ body {
     font-family: $font-jp;
     line-height: 2;
     font-weight: bold;
+    @include mobile {
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
 }
 
@@ -299,7 +360,10 @@ body {
   margin-top: 70px;
 
   &__wrap {
-    margin: 0 15.2% 0 15.2%;
+    margin: 0 15.2%;
+    @include mobile {
+      margin: 0 7.2%;
+    }
   }
 
   &__ttl {
@@ -318,6 +382,9 @@ body {
     justify-content: space-between;
     padding-top: 80px;
     padding-bottom: 80px;
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -326,9 +393,18 @@ body {
     box-shadow: 0 0 6px black;
     font-family: $font-jp;
     font-size: 16px;
+    @include mobile {
+      max-width: 100%;
+      & + .works__item {
+        padding-top: 30px;
+      }
+    }
 
     img {
       vertical-align: bottom;
+      @include mobile {
+        @include img-responsive;
+      }
     }
   }
 
@@ -342,16 +418,6 @@ body {
       background-color: white;
       letter-spacing: 0.05em;
     }
-
-    &--gray {
-      padding-top: 70px;
-      text-align: left;
-      font-size: 90px;
-      color: rgba(255, 255, 255, 0.1);
-      font-family: $font-en;
-      margin-left: -9.8%;
-      padding-bottom: 70px;
-    }
   }
 }
 
@@ -359,6 +425,7 @@ body {
 .service {
   &__wrap {
     width: 100%;
+    max-width: 100%;
   }
 
   &__ttl {
@@ -373,6 +440,9 @@ body {
   &__flex {
     display: flex;
     position: relative;
+    @include mobile {
+      flex-direction: column;
+    }
 
     img {
       width: 100%;
@@ -386,6 +456,10 @@ body {
     height: 320px;
 
     img {
+      @include mobile {
+        @include img-responsive;
+      }
+
       &:hover {
         opacity: 0.3;
         transition-duration: 0.3s;
@@ -400,15 +474,6 @@ body {
     font-size: 40px;
     font-style: italic;
     font-family: $font-en;
-
-    &--gray {
-      font-family: $font-en;
-      font-size: 90px;
-      color: rgba(23, 23, 23, 0.05);
-      text-align: right;
-      margin-right: 8.2%;
-      padding-top: 70px;
-    }
 
     &.left {
       left: 135px;
@@ -455,14 +520,6 @@ body {
     text-align: center;
     padding-top: 80px;
     padding-bottom: 40px;
-
-    &--gray {
-      padding-top: 70px;
-      text-align: left;
-      font-size: 90px;
-      color: rgba(255, 255, 255, 0.1);
-      font-family: $font-en;
-    }
   }
 }
 

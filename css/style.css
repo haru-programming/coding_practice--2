@@ -29,6 +29,24 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+  .main {
+    overflow: hidden;
+  }
+}
+
+.main__right {
+  width: 200px;
+}
+
+.main__right.borderBlack {
+  border-top: 5px solid #282f35;
+}
+
+.main__right.borderWhite {
+  border-top: 5px solid white;
+}
+
 .main__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,16 +56,6 @@ body {
           align-items: center;
   height: 82px;
   padding-top: 104px;
-}
-
-.main__flex--right {
-  border-top: 5px solid #282f35;
-  width: 200px;
-}
-
-.main__flex--right2 {
-  border-top: 5px solid white;
-  width: 200px;
 }
 
 .main__flex.--works {
@@ -68,20 +76,48 @@ body {
           justify-content: flex-end;
 }
 
+.main__txt {
+  font-family: "Noto Serif", sans-serif;
+  font-size: 90px;
+  color: rgba(23, 23, 23, 0.05);
+  text-align: right;
+  padding-top: 70px;
+}
+
+.main__txt.--right {
+  margin-right: -88px;
+}
+
+.main__txt.--right2 {
+  margin-right: 8.2%;
+}
+
+.main__txt.--left {
+  text-align: left;
+  margin-left: -9.8%;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.main__txt.--left2 {
+  color: rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
 .header {
   color: white;
+  width: 100%;
+  height: 752px;
   background-image: url(../img/fv-bgi_01@2x.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 752px;
   position: relative;
 }
 
 @media screen and (max-width: 767px) {
   .header {
     background-position-x: center;
-    background-size: auto 599px;
+    background-size: cover;
+    height: 599px;
   }
 }
 
@@ -200,48 +236,70 @@ body {
 
 .fv {
   position: absolute;
-  top: 51%;
   font-weight: bold;
+  top: 50%;
+  color: white;
 }
 
 @media screen and (max-width: 767px) {
   .fv {
-    top: 30%;
-    left: 20%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    white-space: nowrap;
   }
 }
 
 .fv__ttl {
   font-size: 70px;
   font-family: "Noto Serif", sans-serif;
+  padding-left: 120px;
+  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 767px) {
   .fv__ttl {
-    font-size: 37px;
+    font-size: 9.8vw;
     text-align: center;
-    letter-spacing: 0.05em;
+    padding-left: 0;
   }
 }
 
 .fv__txt {
   font-size: 40px;
   font-family: "Noto Serif JP", sans-serif;
+  padding-left: 140px;
+  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 767px) {
   .fv__txt {
-    font-size: 30px;
-    padding-top: 59px;
-    padding-left: 36px;
-    width: 286px;
+    font-size: 8vw;
+    padding-top: 32px;
+    padding-left: 0;
     text-align: center;
-    letter-spacing: 0.05em;
+  }
+}
+
+.br-sp {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .br-sp {
+    display: block;
   }
 }
 
 .concept__wrap {
-  margin: 0 15.2% 0 15.2%;
+  margin: 0 15.2%;
+}
+
+@media screen and (max-width: 767px) {
+  .concept__wrap {
+    margin: 0 7.2%;
+  }
 }
 
 .concept__ttl {
@@ -252,6 +310,14 @@ body {
   padding-right: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .concept__ttl {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
 .concept__txt {
   font-size: 30px;
   color: #171717;
@@ -260,13 +326,12 @@ body {
   padding-top: 70px;
 }
 
-.concept__txt--gray {
-  font-family: "Noto Serif", sans-serif;
-  font-size: 90px;
-  color: rgba(23, 23, 23, 0.05);
-  text-align: right;
-  margin-right: -88px;
-  padding-top: 70px;
+@media screen and (max-width: 767px) {
+  .concept__txt {
+    font-size: 20px;
+    font-weight: bold;
+    width: 336px;
+  }
 }
 
 .concept__flexbox {
@@ -275,6 +340,15 @@ body {
   display: flex;
   width: 100%;
   padding-top: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .concept__flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .concept__left {
@@ -290,6 +364,13 @@ body {
   font-weight: bold;
 }
 
+@media screen and (max-width: 767px) {
+  .concept__left {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
 .works {
   background-image: url(../img/works-bgi@2x.jpg);
   background-repeat: no-repeat;
@@ -300,7 +381,13 @@ body {
 }
 
 .works__wrap {
-  margin: 0 15.2% 0 15.2%;
+  margin: 0 15.2%;
+}
+
+@media screen and (max-width: 767px) {
+  .works__wrap {
+    margin: 0 7.2%;
+  }
 }
 
 .works__ttl {
@@ -325,6 +412,15 @@ body {
   padding-bottom: 80px;
 }
 
+@media screen and (max-width: 767px) {
+  .works__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .works__item {
   border: 1px solid #282f35;
   max-width: 320px;
@@ -334,8 +430,25 @@ body {
   font-size: 16px;
 }
 
+@media screen and (max-width: 767px) {
+  .works__item {
+    max-width: 100%;
+  }
+  .works__item + .works__item {
+    padding-top: 30px;
+  }
+}
+
 .works__item img {
   vertical-align: bottom;
+}
+
+@media screen and (max-width: 767px) {
+  .works__item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .works__txt {
@@ -350,18 +463,9 @@ body {
   letter-spacing: 0.05em;
 }
 
-.works__txt--gray {
-  padding-top: 70px;
-  text-align: left;
-  font-size: 90px;
-  color: rgba(255, 255, 255, 0.1);
-  font-family: "Noto Serif", sans-serif;
-  margin-left: -9.8%;
-  padding-bottom: 70px;
-}
-
 .service__wrap {
   width: 100%;
+  max-width: 100%;
 }
 
 .service__ttl {
@@ -380,6 +484,15 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .service__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .service__flex img {
   width: 100%;
 }
@@ -389,6 +502,14 @@ body {
   background-color: #171717;
   width: 480px;
   height: 320px;
+}
+
+@media screen and (max-width: 767px) {
+  .service__img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .service__img img:hover {
@@ -404,15 +525,6 @@ body {
   font-size: 40px;
   font-style: italic;
   font-family: "Noto Serif", sans-serif;
-}
-
-.service__txt--gray {
-  font-family: "Noto Serif", sans-serif;
-  font-size: 90px;
-  color: rgba(23, 23, 23, 0.05);
-  text-align: right;
-  margin-right: 8.2%;
-  padding-top: 70px;
 }
 
 .service__txt.left {
@@ -458,14 +570,6 @@ body {
   text-align: center;
   padding-top: 80px;
   padding-bottom: 40px;
-}
-
-.contact__txt--gray {
-  padding-top: 70px;
-  text-align: left;
-  font-size: 90px;
-  color: rgba(255, 255, 255, 0.1);
-  font-family: "Noto Serif", sans-serif;
 }
 
 .footer__wrap {
