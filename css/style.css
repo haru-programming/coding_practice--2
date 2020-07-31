@@ -105,11 +105,11 @@ body {
 
 .header {
   color: white;
+  width: 100%;
+  height: 752px;
   background-image: url(../img/fv-bgi_01@2x.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 752px;
   position: relative;
 }
 
@@ -117,6 +117,7 @@ body {
   .header {
     background-position-x: center;
     background-size: cover;
+    height: 599px;
   }
 }
 
@@ -235,48 +236,70 @@ body {
 
 .fv {
   position: absolute;
-  top: 51%;
   font-weight: bold;
+  top: 50%;
+  color: white;
 }
 
 @media screen and (max-width: 767px) {
   .fv {
-    top: 30%;
-    left: 20%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    white-space: nowrap;
   }
 }
 
 .fv__ttl {
   font-size: 70px;
   font-family: "Noto Serif", sans-serif;
+  padding-left: 120px;
+  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 767px) {
   .fv__ttl {
-    font-size: 37px;
+    font-size: 9.8vw;
     text-align: center;
-    letter-spacing: 0.05em;
+    padding-left: 0;
   }
 }
 
 .fv__txt {
   font-size: 40px;
   font-family: "Noto Serif JP", sans-serif;
+  padding-left: 140px;
+  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 767px) {
   .fv__txt {
-    font-size: 30px;
-    padding-top: 59px;
-    padding-left: 36px;
-    width: 286px;
+    font-size: 8vw;
+    padding-top: 32px;
+    padding-left: 0;
     text-align: center;
-    letter-spacing: 0.05em;
+  }
+}
+
+.br-sp {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .br-sp {
+    display: block;
   }
 }
 
 .concept__wrap {
-  margin: 0 15.2% 0 15.2%;
+  margin: 0 15.2%;
+}
+
+@media screen and (max-width: 767px) {
+  .concept__wrap {
+    margin: 0 7.2%;
+  }
 }
 
 .concept__ttl {
@@ -287,12 +310,28 @@ body {
   padding-right: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .concept__ttl {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
 .concept__txt {
   font-size: 30px;
   color: #171717;
   text-align: center;
   font-family: "Noto Serif JP", sans-serif;
   padding-top: 70px;
+}
+
+@media screen and (max-width: 767px) {
+  .concept__txt {
+    font-size: 20px;
+    font-weight: bold;
+    width: 336px;
+  }
 }
 
 .concept__flexbox {
@@ -323,6 +362,13 @@ body {
   font-family: "Noto Serif JP", sans-serif;
   line-height: 2;
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .concept__left {
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
 
 .works {
