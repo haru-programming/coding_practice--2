@@ -39,6 +39,12 @@ body {
   width: 200px;
 }
 
+@media screen and (max-width: 767px) {
+  .main__right {
+    width: 90px;
+  }
+}
+
 .main__right.borderBlack {
   border-top: 5px solid #282f35;
 }
@@ -65,9 +71,21 @@ body {
   margin-right: -8.2%;
 }
 
+@media screen and (max-width: 767px) {
+  .main__flex.--works {
+    margin-right: 4vw;
+  }
+}
+
 .main__flex.--service {
   margin-left: 15.2%;
   padding-bottom: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .main__flex.--service {
+    margin-left: 4vw;
+  }
 }
 
 .main__flex.--contact {
@@ -84,12 +102,31 @@ body {
   padding-top: 70px;
 }
 
+@media screen and (max-width: 767px) {
+  .main__txt {
+    font-size: 40px;
+    padding-top: 40px;
+  }
+}
+
 .main__txt.--right {
   margin-right: -88px;
 }
 
+@media screen and (max-width: 767px) {
+  .main__txt.--right {
+    margin: 0;
+  }
+}
+
 .main__txt.--right2 {
   margin-right: 8.2%;
+}
+
+@media screen and (max-width: 767px) {
+  .main__txt.--right2 {
+    margin-left: 4vw;
+  }
 }
 
 .main__txt.--left {
@@ -98,9 +135,21 @@ body {
   color: rgba(255, 255, 255, 0.1);
 }
 
+@media screen and (max-width: 767px) {
+  .main__txt.--left {
+    margin: 0;
+  }
+}
+
 .main__txt.--left2 {
   color: rgba(255, 255, 255, 0.1);
   text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .main__txt.--left2 {
+    margin: 0;
+  }
 }
 
 .header {
@@ -111,13 +160,14 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+  min-height: 599px;
 }
 
 @media screen and (max-width: 767px) {
   .header {
-    background-position-x: center;
     background-size: cover;
-    height: 599px;
+    background-position-x: center;
+    height: 100vh;
   }
 }
 
@@ -292,13 +342,19 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .br-pc {
+    display: none;
+  }
+}
+
 .concept__wrap {
   margin: 0 15.2%;
 }
 
 @media screen and (max-width: 767px) {
   .concept__wrap {
-    margin: 0 7.2%;
+    margin: 0 4vw;
   }
 }
 
@@ -308,6 +364,7 @@ body {
   font-family: "Noto Serif", sans-serif;
   font-style: italic;
   padding-right: 30px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
@@ -331,6 +388,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     width: 336px;
+    white-space: nowrap;
   }
 }
 
@@ -368,6 +426,15 @@ body {
   .concept__left {
     font-size: 16px;
     font-weight: bold;
+    padding-right: 0;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .concept__left img {
+    max-width: 100%;
+    padding-right: 4vw;
   }
 }
 
@@ -386,7 +453,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .works__wrap {
-    margin: 0 7.2%;
+    margin: 0 4vw;
   }
 }
 
@@ -398,6 +465,15 @@ body {
   text-align: right;
   padding-right: 48px;
   letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .works__ttl {
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 30px;
+  }
 }
 
 .works__list {
@@ -475,17 +551,23 @@ body {
   font-style: italic;
   letter-spacing: 0.1em;
   padding-right: 29px;
-}
-
-.service__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-  .service__flex {
+  .service__ttl {
+    font-size: 30px;
+  }
+}
+
+.service__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .service__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -493,50 +575,47 @@ body {
   }
 }
 
-.service__flex img {
-  width: 100%;
-}
-
-.service__img {
-  vertical-align: bottom;
-  background-color: #171717;
-  width: 480px;
-  height: 320px;
+.service__item {
+  width: 33.3%;
 }
 
 @media screen and (max-width: 767px) {
-  .service__img img {
+  .service__item {
     width: 100%;
-    max-width: 100%;
-    height: auto;
   }
 }
 
-.service__img img:hover {
-  opacity: 0.3;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-
-.service__txt {
-  position: absolute;
-  top: 130px;
+.service__item a {
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  text-align: center;
   color: white;
+  line-height: 320px;
   font-size: 40px;
+  font-weight: bold;
   font-style: italic;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-family: "Noto Serif", sans-serif;
 }
 
-.service__txt.left {
-  left: 135px;
+.service__item a:hover {
+  background-color: rgba(40, 47, 53, 0.7);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.service__txt.center {
-  left: 630px;
+.service__item.left {
+  background-image: url(../img/service-img01@2x.jpg);
 }
 
-.service__txt.right {
-  left: 1100px;
+.service__item.center {
+  background-image: url(../img/service-img02@2x.jpg);
+}
+
+.service__item.right {
+  background-image: url(../img/sevice-img03@2x.jpg);
 }
 
 .contact {
@@ -552,6 +631,12 @@ body {
   margin: 0 8.2%;
 }
 
+@media screen and (max-width: 767px) {
+  .contact__wrap {
+    margin: 0 4vw;
+  }
+}
+
 .contact__ttl {
   color: white;
   font-size: 50px;
@@ -560,6 +645,13 @@ body {
   text-align: right;
   letter-spacing: 0.1em;
   padding-right: 30px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .contact__ttl {
+    font-size: 30px;
+  }
 }
 
 .contact__txt {
@@ -570,6 +662,13 @@ body {
   text-align: center;
   padding-top: 80px;
   padding-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .contact__txt {
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
 }
 
 .footer__wrap {
