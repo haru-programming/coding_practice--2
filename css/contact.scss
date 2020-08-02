@@ -4,6 +4,17 @@
 $font-en: "Noto Serif", sans-serif;
 $font-jp: "Noto Serif JP", sans-serif;
 
+//******レスポンシブ対応******
+//ブレイクポイント
+$mb: 767px;
+
+//@mediaのフォーマット
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
 //全体の設定
 * {
   padding: 0;
@@ -13,25 +24,20 @@ $font-jp: "Noto Serif JP", sans-serif;
 
 //共通ボタン
 .btn {
-  &__txt {
-    font-size: 16px;
-    font-weight: bold;
-    font-family: $font-en;
-  }
-  &--yellow {
-    padding: 19px 71px 18px 71px;
+  padding: 19px 71px 19px 71px;
+  box-shadow: 0 0 6px #1b1310;
+  border-radius: 51px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $font-en;
+  margin: 80px auto;
+  &.--yellow {
     background-color: #f7d43f;
-    box-shadow: 0 0 6px #1b1310;
-    border-radius: 51px;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: $font-en;
     border: solid 1px #f7d43f;
   }
 
   &--center {
     text-align: center;
-    padding-top: 80px;
   }
 }
 
@@ -50,6 +56,11 @@ body {
   height: 453px;
   color: white;
   position: absolute;
+  @include mobile {
+    background-size: cover;
+    background-position-x: center;
+    height: 360px;
+  }
 
   &__wrap {
     margin: 0 8.3%;
@@ -68,6 +79,13 @@ body {
     padding: 0 8.3%;
     font-weight: bold;
     font-style: italic;
+    @include mobile {
+      height: 70px;
+      padding: 0 4vw;
+    }
+    &.transform {
+      background-color: #282f35;
+    }
   }
 
   &__ttl {
@@ -77,6 +95,10 @@ body {
 
 //ここからnav
 .nav {
+  @include mobile {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -99,30 +121,137 @@ body {
   }
 }
 
+//******ここからスマホ版ハンバーガーメニュー******
+//ハンバーガーの部分
+.nav__toggle {
+  display: none;
+  @include mobile {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 16px;
+  }
+}
+.nav__toggle i {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.5s, opacity 0.5s;
+  z-index: 3;
+}
+
+.nav__toggle i:nth-child(1) {
+  top: 0;
+}
+.nav__toggle i:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.nav__toggle i:nth-child(3) {
+  bottom: 0;
+}
+
+//タップ後のハンバーガー
+//１つ目のspanを-45度にする
+.nav__toggle.active i:nth-child(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+//2番目と3番目のspanを45度に
+.nav__toggle.active i:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle.active i:nth-child(3) {
+  transform: translateY(-4px) rotate(45deg);
+}
+
+//スライドメニュー
+.nav2 {
+  display: none;
+  @include mobile {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100vw);
+    transition: all 0.3s;
+    background-color: #282f35;
+
+    &__hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    &__item {
+      font-size: 16px;
+      font-family: $font-en;
+      font-weight: bold;
+      font-style: italic;
+      list-style: none;
+      text-align: center;
+      & a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    &__item + &__item {
+      padding-top: 50px;
+    }
+  }
+}
+
+.nav2.active {
+  transform: translateX(0);
+}
+
 //ここからファーストビューの文字
 .fv {
   position: relative;
   color: white;
+  height: 453px;
+  @include mobile {
+    height: 360px;
+  }
 
   &__ttl {
     font-size: 70px;
     font-family: $font-en;
     left: 50%;
+    top: 50%;
     text-align: center;
     padding-top: 170px;
     font-style: italic;
+    @include mobile {
+      font-size: 9.375vw;
+    }
   }
 
   &__txt {
     font-size: 40px;
-    font-family: $font-jp;
+    font-family: $font-en;
     left: 20%;
+    text-align: left;
+    padding-top: 40px;
+    @include mobile {
+      margin: 0 4vw;
+    }
 
-    &--gray {
-      text-align: left;
-      font-size: 90px;
+    &.--gray {
       color: rgba(255, 255, 255, 0.1);
-      font-family: $font-en;
     }
   }
 }
@@ -131,6 +260,10 @@ body {
 .contact {
   font-family: $font-jp;
   padding-top: 100px;
+  @include mobile {
+    overflow: hidden;
+    margin: 4vw;
+  }
   &__ttl {
     font-size: 16px;
     font-weight: bold;
@@ -148,10 +281,16 @@ body {
       width: 100%;
       padding-top: 0;
     }
+    @include mobile {
+      width: 100%;
+    }
   }
   &__wrap {
     width: 700px;
     margin: 0 auto;
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -161,20 +300,29 @@ body {
 
   &__list {
     display: flex;
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
     list-style: none;
+    @include mobile {
+      padding-top: 15px;
+    }
   }
 
   &__item + &__item {
     padding-left: 20px;
+    @include mobile {
+      padding-left: 0;
+      padding-top: 5px;
+    }
   }
 }
 
 //ここからフッター
 .footer {
-  margin-top: 80px;
   &__wrap {
     text-align: center;
   }

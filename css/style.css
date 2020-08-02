@@ -190,7 +190,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   padding: 0 8.3%;
   font-weight: bold;
@@ -205,6 +205,12 @@ body {
 
 .header__ttl {
   font-size: 26px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
 }
 
 .nav__list {
@@ -239,10 +245,6 @@ body {
   }
 }
 
-.nav2 {
-  display: none;
-}
-
 .nav__toggle {
   display: none;
 }
@@ -268,6 +270,7 @@ body {
   transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  z-index: 3;
 }
 
 .nav__toggle i:nth-child(1) {
@@ -282,6 +285,78 @@ body {
 
 .nav__toggle i:nth-child(3) {
   bottom: 0;
+}
+
+.nav__toggle.active i:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-45deg);
+          transform: translateY(10px) rotate(-45deg);
+}
+
+.nav__toggle.active i:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle.active i:nth-child(3) {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+          transform: translateY(-4px) rotate(45deg);
+}
+
+.nav2 {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .nav2 {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #282f35;
+  }
+  .nav2__hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .nav2__item {
+    font-size: 16px;
+    font-family: "Noto Serif", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    list-style: none;
+    text-align: center;
+  }
+  .nav2__item a {
+    text-decoration: none;
+    color: white;
+  }
+  .nav2__item + .nav2__item {
+    padding-top: 50px;
+  }
+}
+
+.nav2.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .fv {
@@ -389,6 +464,7 @@ body {
     font-weight: bold;
     width: 336px;
     white-space: nowrap;
+    margin: 0 auto;
   }
 }
 
@@ -428,6 +504,7 @@ body {
     font-weight: bold;
     padding-right: 0;
     max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -608,14 +685,20 @@ body {
 
 .service__item.left {
   background-image: url(../img/service-img01@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .service__item.center {
   background-image: url(../img/service-img02@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .service__item.right {
   background-image: url(../img/sevice-img03@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact {
