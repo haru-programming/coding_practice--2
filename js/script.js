@@ -16,7 +16,6 @@ $(function () {
       }
   });
 });
-
 //ファーストビューのslider
 $(".fv__list").slick({
   autoplay: true,
@@ -24,11 +23,4 @@ $(".fv__list").slick({
   speed: 1000,
   fade: true,
   cssEase: "linear",
-});
-
-//ハンバーガーメニューの開閉
-$(".burger-btn").on("click", function () {
-  $(".header-nav").fadeToggle(300);
-  $(".burger-btn").toggleClass("cross");
-  $("body").toggleClass("noscroll");
 });

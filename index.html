@@ -33,14 +33,14 @@
     <!-- ここからヘッダー -->
     <header class="header">
       <div class="header__inner">
-          <h1 class="header__ttl">Cresta Design</h1>
+          <h1 class="header__ttl"><a href="#">Cresta Design</a></h1>
           <!-- ナビゲーション -->
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#">Concept</a></li>
-              <li class="nav__item"><a href="#">Service</a></li>
-              <li class="nav__item"><a href="#">Works</a></li>
-              <li class="nav__item"><a href="#">Contact</a></li>
+              <li class="nav__item"><a href="#concept">Concept</a></li>
+              <li class="nav__item"><a href="#service">Service</a></li>
+              <li class="nav__item"><a href="#works">Works</a></li>
+              <li class="nav__item"><a href="#contact">Contact</a></li>
             </ul>
           </nav>
           <!-- スマホ版　ハンバーガーメニュー-->
@@ -51,11 +51,10 @@
           </span>
           <nav class="nav2">
             <ul class="nav2__hamburger">
-              <li class="nav2__item"><a href="#">Top</a></li>
-              <li class="nav2__item"><a href="#">Service</a></li>
-              <li class="nav2__item"><a href="#">News</a></li>
-              <li class="nav2__item"><a href="#">Contact</a></li>
-            </ul>
+              <li class="nav2__item"><a href="#concept">Concept</a></li>
+              <li class="nav2__item"><a href="#service">Service</a></li>
+              <li class="nav2__item"><a href="#works">Works</a></li>
+              <li class="nav2__item"><a href="#contact">Contact</a></li>
           </nav>
         </div>
       </div>
@@ -78,31 +77,33 @@
     <!-- ここからメインコンテンツ -->
     <main class="main">
       <!-- ここから Concept -->
-      <section class="concept">
+      <section id="concept" class="concept">
         <div class="concept__wrap">
           <div class="main__flex">
             <h2 class="concept__ttl">CONCEPT</h2>
             <div class="main__right borderBlack"></div>
           </div>
           <p class="concept__txt">
-            “働きたくなる空間”をデザインする<br class="br-sp" />
-            ことで<br class="br-pc" />人々を幸せにする。
+            “働きたくなる空間”をデザインする<br class="br-sp" />ことで<br class="br-pc" />人々を幸せにする。
           </p>
           <div class="concept__flexbox">
-            <p class="concept__left">
-              私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta
-              Designだからこそできる空間デザインを提供させていただきます。
-            </p>
-            <img src="img/concept-image@2x.jpg" alt="オフィスの写真" /
-            class="concept-right"　width="440px" height="240px">
+            <div class="concept__left">
+              <p>
+                私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta
+                Designだからこそできる空間デザインを提供させていただきます。
+              </p>
+            </div>
+            <div class="concept-right">
+              <img src="img/concept-image@2x.jpg" alt="オフィスの写真" /
+              width="440px" height="240px">
+            </div>
           </div>
           <p class="main__txt --right">Our Concept</p>
-        </div>
       </section>
       <!--/ Concept -->
 
       <!-- ここから Works -->
-      <section class="works">
+      <section id="works" class="works">
         <div class="works__wrap">
           <!--works ttl-->
           <div class="main__flex --works">
@@ -141,7 +142,7 @@
       <!--/ works-->
 
       <!-- ここから Service -->
-      <section class="service">
+      <section id="service" class="service">
         <div class="service__wrap">
           <div class="main__flex --service">
             <h2 class="service__ttl">Service</h2>
@@ -164,7 +165,7 @@
       <!--/ service-->
 
       <!-- ここから Contact -->
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="contact__wrap">
           <div class="main__flex --contact">
             <h2 class="contact__ttl">Contact</h2>
@@ -194,5 +195,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-  </body>
+    <script type="text/javascript" src="js/hamburger.js"></script>
 </html>

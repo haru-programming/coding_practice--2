@@ -122,6 +122,7 @@ body {
     @include mobile {
       font-size: 40px;
       padding-top: 40px;
+      color: rgba(23, 23, 23, 0.2);
     }
 
     &.--right {
@@ -154,6 +155,22 @@ body {
         margin: 0;
       }
     }
+  }
+}
+
+//******改行の位置******
+//spのみ改行を入れる
+.br-sp {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+
+//pcのみ改行を入れる
+.br-pc {
+  @include mobile {
+    display: none;
   }
 }
 
@@ -195,25 +212,14 @@ body {
     width: 100%;
     transition: 0.3s;
   }
-  &__top {
-    position: fixed;
-    background-color: #282f35;
-    padding: 30px;
-    width: 100%;
-    transition: 0.3s;
 
-    &.transform {
-      background-color: #282f35;
-    }
+  &.transform {
+    background-color: #282f35;
   }
 
   &__ttl {
     font-size: 26px;
   }
-}
-
-.slick-arrow {
-  display: none !important;
 }
 
 //******ここからnav******
@@ -252,6 +258,7 @@ body {
 //ハンバーガーの部分
 .nav__toggle {
   display: none;
+  cursor: pointer;
   @include mobile {
     display: block;
     position: relative;
@@ -298,11 +305,10 @@ body {
   transform: translateY(-4px) rotate(45deg);
 }
 
-//スライドメニュー
+//SPスライドメニュー
 .nav2 {
   display: none;
   @include mobile {
-    display: block;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -343,6 +349,7 @@ body {
 
 .nav2.active {
   transform: translateX(0);
+  display: block;
 }
 
 //******ここからファーストビューの文字******
@@ -350,12 +357,11 @@ body {
   height: 100vh;
   min-height: 550px;
   position: relative;
-  @include mobile {
-  }
   img {
-    object-fit: cover;
     height: 100vh;
+    width: 100%;
     min-height: 100%;
+    object-fit: cover;
   }
 
   &__copy {
@@ -363,6 +369,12 @@ body {
     left: 120px;
     bottom: 177px;
     color: #fff;
+    @include mobile {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
   }
   &__ttl {
     font-size: 7rem;
@@ -372,8 +384,6 @@ body {
     font-family: $font-en;
     @include mobile {
       font-size: 9.8vw;
-      text-align: center;
-      padding-left: 0;
     }
   }
 
@@ -384,25 +394,12 @@ body {
     font-family: $font-jp;
     @include mobile {
       font-size: 8vw;
-      padding-top: 32px;
-      padding-left: 0;
-      text-align: center;
     }
   }
 }
-//spのみ改行を入れる
-.br-sp {
-  display: none;
-  @include mobile {
-    display: block;
-  }
-}
-
-//pcのみ改行を入れる
-.br-pc {
-  @include mobile {
-    display: none;
-  }
+//スライドショー の次へ・戻るボタン非表示
+.slick-arrow {
+  display: none !important;
 }
 
 //******ここからメイン > コンセプト******
@@ -445,7 +442,8 @@ body {
 
   &__flexbox {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 60px;
     @include mobile {
       flex-direction: column;
@@ -453,14 +451,11 @@ body {
   }
 
   &__left {
-    height: 240px;
-    width: 440px;
+    max-width: 440px;
+    line-height: 1.87;
     font-size: 16px;
-    display: grid;
-    place-items: center;
-    padding-right: 130px;
+    padding-right: 20px;
     font-family: $font-jp;
-    line-height: 2;
     font-weight: bold;
     @include mobile {
       font-size: 16px;
@@ -469,7 +464,8 @@ body {
       max-width: 100%;
       width: 100%;
     }
-    img {
+    &__right {
+      width: 44%;
       @include mobile {
         max-width: 100%;
         padding-right: 4vw;
@@ -516,6 +512,7 @@ body {
     justify-content: space-between;
     padding-top: 80px;
     padding-bottom: 80px;
+    width: 100%;
     @include mobile {
       flex-direction: column;
     }
