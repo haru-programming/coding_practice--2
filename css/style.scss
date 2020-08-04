@@ -165,6 +165,7 @@ body {
   background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true);
   background-repeat: no-repeat;
   background-size: contain;
+  backface-visibility: hidden;
   position: relative;
   min-height: 599px;
   @include mobile {
