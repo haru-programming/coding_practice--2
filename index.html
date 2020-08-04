@@ -21,12 +21,8 @@
     <meta property="og:site_name" content="Cresta Design" />
     <meta property="og:image" content=" img/concept-image@2x.jpg" />
     <!--OGPここまで-->
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP:wght@400;700&display=swap"
       rel="stylesheet"
@@ -36,15 +32,8 @@
   <body>
     <!-- ここからヘッダー -->
     <header class="header">
-      <div class="header__wrap">
-        <div class="header__top">
+      <div class="header__inner">
           <h1 class="header__ttl">Cresta Design</h1>
-          <!--背景スライダー部分 -->
-          <div class="bg">
-            <div class="bg__img01"></div>
-            <div class="bg__img02"></div>
-            <div class="bg__img03"></div>
-          </div>
           <!-- ナビゲーション -->
           <nav class="nav">
             <ul class="nav__list">
@@ -70,14 +59,21 @@
           </nav>
         </div>
       </div>
-      <!-- ファーストビュー -->
-      <div class="fv">
+    </header>
+    <!--/ header-->
+    <!-- ファーストビュー -->
+    <div class="fv">
+      <ul class="fv__list">
+        <li class="fv__img"><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true" ></li>
+        <li class="fv__img"><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_02@2x.jpg?raw=true" ></li>
+        <li class="fv__img"><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_03@2x.jpg?raw=true" ></li>
+      </ul>
+      <div class="fv__copy">
         <p class="fv__ttl">Design for Smile.</p>
         <p class="fv__txt">快適なオフィスを<br class="br-sp" />デザインする</p>
       </div>
-      <!--/ fv-->
-    </header>
-    <!--/ header-->
+    </div>
+    <!--/ fv-->
 
     <!-- ここからメインコンテンツ -->
     <main class="main">
@@ -196,12 +192,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script type="text/javascript" src="js/fixed-header.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
-    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
