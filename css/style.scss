@@ -157,55 +157,50 @@ body {
   }
 }
 
-//ここから背景画像スライダー//
-
-.bg {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 752px;
-  width: 100%;
-  position: relative;
-  @include mobile {
-    background-size: cover;
-    background-position-x: center;
-    height: 100vh;
-  }
-
-  &__img01 {
-    background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true);
-  }
-  &__img02 {
-    background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_02@2x.jpg?raw=true);
-  }
-  &__img03 {
-    background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_03@2x.jpg?raw=true);
-  }
-}
-
 //******ここからヘッダー******
 .header {
-  color: white;
-  height: 752px;
+  padding: 19px 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  box-sizing: border-box;
   width: 100%;
-  &__wrap {
-    margin: 0 8.3%;
-  }
-  &__top {
-    display: flex;
-    height: 96px;
-    justify-content: space-between;
-    align-items: center;
-    font-family: $font-en;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    padding: 0 8.3%;
+  transition: 0.3s;
+  font-family: $font-en;
+  color: white;
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
     font-weight: bold;
     font-style: italic;
-    transition: 0.5s;
+    &:hover {
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &.fixed {
+    position: fixed;
+    background-color: #282f35;
+    padding: 30px;
+    width: 100%;
+    transition: 0.3s;
+  }
+  &__top {
+    position: fixed;
+    background-color: #282f35;
+    padding: 30px;
+    width: 100%;
+    transition: 0.3s;
 
     &.transform {
       background-color: #282f35;
@@ -215,6 +210,10 @@ body {
   &__ttl {
     font-size: 26px;
   }
+}
+
+.slick-arrow {
+  display: none !important;
 }
 
 //******ここからnav******
@@ -348,22 +347,29 @@ body {
 
 //******ここからファーストビューの文字******
 .fv {
-  position: absolute;
-  font-weight: bold;
-  top: 50%;
-  color: white;
+  height: 100vh;
+  min-height: 550px;
+  position: relative;
   @include mobile {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
+  }
+  img {
+    object-fit: cover;
+    height: 100vh;
+    min-height: 100%;
   }
 
+  &__copy {
+    position: absolute;
+    left: 120px;
+    bottom: 177px;
+    color: #fff;
+  }
   &__ttl {
-    font-size: 70px;
+    font-size: 7rem;
+    margin-bottom: 31px;
+    font-weight: bold;
+    color: white;
     font-family: $font-en;
-    padding-left: 120px;
-    letter-spacing: 0.05em;
     @include mobile {
       font-size: 9.8vw;
       text-align: center;
@@ -372,10 +378,10 @@ body {
   }
 
   &__txt {
-    font-size: 40px;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
     font-family: $font-jp;
-    padding-left: 140px;
-    letter-spacing: 0.05em;
     @include mobile {
       font-size: 8vw;
       padding-top: 32px;
@@ -474,7 +480,7 @@ body {
 
 //******ここからメイン > ワーク******
 .works {
-  background-image: url(../img/works-bgi@2x.jpg);
+  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/works-bgi@2x.jpg?raw=true);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

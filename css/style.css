@@ -152,67 +152,68 @@ body {
   }
 }
 
-.bg {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 752px;
-  width: 100%;
-  position: relative;
-}
-
-@media screen and (max-width: 767px) {
-  .bg {
-    background-size: cover;
-    background-position-x: center;
-    height: 100vh;
-  }
-}
-
-.bg__img01 {
-  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true);
-}
-
-.bg__img02 {
-  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_02@2x.jpg?raw=true);
-}
-
-.bg__img03 {
-  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_03@2x.jpg?raw=true);
-}
-
 .header {
-  color: white;
-  height: 752px;
+  padding: 19px 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Noto Serif", sans-serif;
+  color: white;
 }
 
-.header__wrap {
-  margin: 0 8.3%;
+.header a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: bold;
+  font-style: italic;
 }
 
-.header__top {
+.header a:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 96px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Noto Serif", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header.fixed {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  background-color: #282f35;
+  padding: 30px;
   width: 100%;
-  padding: 0 8.3%;
-  font-weight: bold;
-  font-style: italic;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__top {
+  position: fixed;
+  background-color: #282f35;
+  padding: 30px;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header__top.transform {
@@ -221,6 +222,10 @@ body {
 
 .header__ttl {
   font-size: 26px;
+}
+
+.slick-arrow {
+  display: none !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -376,27 +381,31 @@ body {
 }
 
 .fv {
-  position: absolute;
-  font-weight: bold;
-  top: 50%;
-  color: white;
+  height: 100vh;
+  min-height: 550px;
+  position: relative;
 }
 
-@media screen and (max-width: 767px) {
-  .fv {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    white-space: nowrap;
-  }
+.fv img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh;
+  min-height: 100%;
+}
+
+.fv__copy {
+  position: absolute;
+  left: 120px;
+  bottom: 177px;
+  color: #fff;
 }
 
 .fv__ttl {
-  font-size: 70px;
+  font-size: 7rem;
+  margin-bottom: 31px;
+  font-weight: bold;
+  color: white;
   font-family: "Noto Serif", sans-serif;
-  padding-left: 120px;
-  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 767px) {
@@ -408,10 +417,10 @@ body {
 }
 
 .fv__txt {
-  font-size: 40px;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
   font-family: "Noto Serif JP", sans-serif;
-  padding-left: 140px;
-  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 767px) {
@@ -532,7 +541,7 @@ body {
 }
 
 .works {
-  background-image: url(../img/works-bgi@2x.jpg);
+  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/works-bgi@2x.jpg?raw=true);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
