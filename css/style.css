@@ -152,23 +152,39 @@ body {
   }
 }
 
-.header {
-  color: white;
-  width: 100%;
-  height: 752px;
-  background-image: url(../img/fv-bgi_01@2x.jpg);
+.bg {
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
+  height: 752px;
+  width: 100%;
   position: relative;
-  min-height: 599px;
 }
 
 @media screen and (max-width: 767px) {
-  .header {
+  .bg {
     background-size: cover;
     background-position-x: center;
     height: 100vh;
   }
+}
+
+.bg__img01 {
+  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true);
+}
+
+.bg__img02 {
+  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_02@2x.jpg?raw=true);
+}
+
+.bg__img03 {
+  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_03@2x.jpg?raw=true);
+}
+
+.header {
+  color: white;
+  height: 752px;
+  width: 100%;
 }
 
 .header__wrap {

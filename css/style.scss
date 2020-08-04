@@ -157,23 +157,37 @@ body {
   }
 }
 
-//******ここからヘッダー******
-.header {
-  color: white;
-  width: 100%;
-  height: 752px;
-  background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true);
+//ここから背景画像スライダー//
+
+.bg {
   background-repeat: no-repeat;
   background-size: contain;
-  backface-visibility: hidden;
+  background-position: center;
+  height: 752px;
+  width: 100%;
   position: relative;
-  min-height: 599px;
   @include mobile {
     background-size: cover;
     background-position-x: center;
     height: 100vh;
   }
 
+  &__img01 {
+    background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true);
+  }
+  &__img02 {
+    background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_02@2x.jpg?raw=true);
+  }
+  &__img03 {
+    background-image: url(https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_03@2x.jpg?raw=true);
+  }
+}
+
+//******ここからヘッダー******
+.header {
+  color: white;
+  height: 752px;
+  width: 100%;
   &__wrap {
     margin: 0 8.3%;
   }
