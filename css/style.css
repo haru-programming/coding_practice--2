@@ -698,8 +698,10 @@ body {
   background-size: cover;
 }
 
-.service__list + .service__list {
-  margin-top: 30px;
+@media screen and (max-width: 767px) {
+  .service__list + .service__list {
+    margin-top: 30px;
+  }
 }
 
 .contact {
@@ -726,7 +728,7 @@ body {
   font-style: italic;
   text-align: right;
   letter-spacing: 0.1em;
-  d-right: 30px;
+  padding-right: 30px;
   font-weight: bold;
 }
 
