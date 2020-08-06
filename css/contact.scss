@@ -29,8 +29,8 @@ $mb: 767px;
   border-radius: 51px;
   font-weight: bold;
   font-size: 16px;
-  font-family: $font-en;
-  margin: 80px auto;
+  text-decoration: none;
+  color: #171717;
   &.--yellow {
     background-color: #f7d43f;
     border: solid 1px #f7d43f;
@@ -38,6 +38,7 @@ $mb: 767px;
 
   &--center {
     text-align: center;
+    margin-top: 80px;
   }
 }
 
@@ -45,6 +46,7 @@ $mb: 767px;
 body {
   width: 100%;
   max-width: 100%;
+  font-family: "Noto Serif", "Noto Serif JP", sans-serif;
 }
 
 //ここからヘッダー
@@ -59,7 +61,6 @@ body {
   box-sizing: border-box;
   width: 100%;
   transition: 0.3s;
-  font-family: $font-en;
   color: white;
   a {
     color: #fff;
@@ -82,7 +83,6 @@ body {
   &.fixed {
     position: fixed;
     background-color: #282f35;
-    padding: 30px;
     width: 100%;
     transition: 0.3s;
   }
@@ -101,11 +101,11 @@ body {
     display: none;
   }
 
-  &__list {
+  &__lists {
     display: flex;
     align-items: center;
   }
-  &__item {
+  &__list {
     color: white;
     list-style: none;
     a {
@@ -118,7 +118,7 @@ body {
       }
     }
   }
-  &__item + &__item {
+  &__list + &__list {
     padding-left: 30px;
   }
 }
@@ -198,9 +198,8 @@ body {
       height: 100vh;
     }
 
-    &__item {
+    &__list {
       font-size: 16px;
-      font-family: $font-en;
       font-weight: bold;
       font-style: italic;
       list-style: none;
@@ -212,7 +211,7 @@ body {
     }
 
     &__item + &__item {
-      padding-top: 50px;
+      margin-top: 50px;
     }
   }
 }
@@ -249,14 +248,12 @@ body {
     font-weight: bold;
     font-style: italic;
     color: white;
-    font-family: $font-en;
     text-align: center;
     @include mobile {
       font-size: 9.8vw;
     }
   }
   &__txt {
-    font-family: $font-en;
     font-size: 90px;
     color: rgba(255, 255, 255, 0.1);
     text-align: left;
@@ -270,7 +267,7 @@ body {
 //ここからメイン
 .contact {
   font-family: $font-jp;
-  padding-top: 100px;
+  margin-top: 100px;
   @include mobile {
     overflow: hidden;
     margin: 4vw;
@@ -281,7 +278,7 @@ body {
   }
   &__item {
     font-size: 16px;
-    padding-top: 25px;
+    margin-top: 25px;
     font-weight: bold;
     input {
       height: 30px;
@@ -290,7 +287,7 @@ body {
     textarea {
       height: 171px;
       width: 100%;
-      padding-top: 0;
+      margin-top: 0;
     }
     @include mobile {
       width: 100%;
@@ -298,9 +295,11 @@ body {
   }
   &__wrap {
     width: 700px;
+    height: 630px;
     margin: 0 auto;
     @include mobile {
       width: 100%;
+      height: 100vh;
     }
   }
 }
@@ -319,7 +318,7 @@ body {
   &__item {
     list-style: none;
     @include mobile {
-      padding-top: 15px;
+      margin-top: 15px;
     }
   }
 
@@ -327,7 +326,7 @@ body {
     padding-left: 20px;
     @include mobile {
       padding-left: 0;
-      padding-top: 5px;
+      margin-top: 5px;
     }
   }
 }
@@ -341,7 +340,6 @@ body {
     color: #282f35;
     font-size: 14px;
     font-weight: bold;
-    font-family: $font-en;
     padding: 30px 0;
   }
 }

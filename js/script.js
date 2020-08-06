@@ -1,19 +1,15 @@
-//sticky header
+//ヘッダーの固定
 
 $(function () {
-  var $win = $(window),
-    $fv = $(".fv"),
-    $header = $(".header");
-  (fvHeight = $fv.outerHeight()), (fixedClass = "fixed");
+  //fvを超えたらスクロールでheaderに色を付ける
+  var mainPos = $(".fv").height();
 
-  $win.on("load scroll", function () {
-    var value = $(this).scrollTop();
-    if ($win.width() > 768)
-      if (value > fvHeight) {
-        $header.addClass(fixedClass);
-      } else {
-        $header.removeClass(fixedClass);
-      }
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > mainPos) {
+      $(".header").addClass("fixed");
+    } else {
+      $(".header").removeClass("fixed");
+    }
   });
 });
 //ファーストビューのslider
