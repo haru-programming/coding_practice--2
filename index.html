@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: https://cresta.design.com#">
+<html lang="ja" prefix="og:https://cresta.design.com#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,11 +36,11 @@
           <h1 class="header__ttl"><a href="#">Cresta Design</a></h1>
           <!-- ナビゲーション -->
           <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a href="#concept">Concept</a></li>
-              <li class="nav__item"><a href="#service">Service</a></li>
-              <li class="nav__item"><a href="#works">Works</a></li>
-              <li class="nav__item"><a href="#contact">Contact</a></li>
+            <ul class="nav__lists">
+              <li class="nav__list"><a href="#concept">Concept</a></li>
+              <li class="nav__list"><a href="#service">Service</a></li>
+              <li class="nav__list"><a href="#works">Works</a></li>
+              <li class="nav__list"><a href="#contact">Contact</a></li>
             </ul>
           </nav>
           <!-- スマホ版　ハンバーガーメニュー-->
@@ -63,9 +63,9 @@
     <!-- ファーストビュー -->
     <div class="fv">
       <ul class="fv__list">
-        <li class="fv__img"><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true" ></li>
-        <li class="fv__img"><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_02@2x.jpg?raw=true" ></li>
-        <li class="fv__img"><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_03@2x.jpg?raw=true" ></li>
+        <li><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_01@2x.jpg?raw=true" ></li>
+        <li><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_02@2x.jpg?raw=true" ></li>
+        <li><img src="https://github.com/haru-programming/coding_practice--2/blob/master/img/fv-bgi_03@2x.jpg?raw=true" ></li>
       </ul>
       <div class="fv__copy">
         <p class="fv__ttl">Design for Smile.</p>
@@ -73,16 +73,13 @@
       </div>
     </div>
     <!--/ fv-->
-
+    
     <!-- ここからメインコンテンツ -->
     <main class="main">
       <!-- ここから Concept -->
       <section id="concept" class="concept">
         <div class="concept__wrap">
-          <div class="main__flex">
-            <h2 class="concept__ttl">CONCEPT</h2>
-            <div class="main__right borderBlack"></div>
-          </div>
+          <h2 class="main__ttl">CONCEPT</h2>
           <p class="concept__txt">
             “働きたくなる空間”をデザインする<br class="br-sp" />ことで<br class="br-pc" />人々を幸せにする。
           </p>
@@ -93,7 +90,7 @@
                 Designだからこそできる空間デザインを提供させていただきます。
               </p>
             </div>
-            <div class="concept-right">
+            <div class="concept__right">
               <img src="img/concept-image@2x.jpg" alt="オフィスの写真" /
               width="440px" height="240px">
             </div>
@@ -106,35 +103,30 @@
       <section id="works" class="works">
         <div class="works__wrap">
           <!--works ttl-->
-          <div class="main__flex --works">
-            <h2 class="works__ttl">Works</h2>
-            <div class="main__right borderWhite"></div>
-          </div>
+            <h2 class="main__ttl white right">Works</h2>
           <!--/works ttl-->
           <ul class="works__list">
             <li class="works__item">
-              <img src="img/card-img01@2x.jpg" alt="広いオフィスの画像" />
+              <img src="img/card-img01@2x.jpg" alt="広いオフィスの画像" width="320px" height="200px" />
               <p class="works__txt">
                 新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
               </p>
             </li>
             <li class="works__item">
-              <img src="img/card-img02@2x.jpg" alt="オフィスの一角の画像" />
+              <img src="img/card-img02@2x.jpg" alt="オフィスの一角の画像" width="320px" height="200px"/>
               <p class="works__txt--center">
                 新規サイトを公開しました。今回のサイトは白と黒を基調にした
               </p>
             </li>
             <li class="works__item">
-              <img src="img/card-img03@2x.jpg" alt="オフィスの一角の画像" />
+              <img src="img/card-img03@2x.jpg" alt="オフィスの一角の画像" width="320px" height="200px"/>
               <p class="works__txt">
                 新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
               </p>
             </li>
           </ul>
           <div class="btn--center">
-            <button class="btn btn--yellow">
-              <p class="btn__txt">View more</p>
-            </button>
+            <a href="#" class="btn btn--yellow">View more</a>
           </div>
           <p class="main__txt --left">Our Works</p>
         </div>
@@ -144,18 +136,15 @@
       <!-- ここから Service -->
       <section id="service" class="service">
         <div class="service__wrap">
-          <div class="main__flex --service">
-            <h2 class="service__ttl">Service</h2>
-            <div class="main__right borderBlack"></div>
-          </div>
-          <ul class="service__list">
-            <li class="service__item left">
+          <h2 class="main__ttl left">Service</h2>
+          <ul class="service__lists">
+            <li class="service__list left">
               <a href="#">Hearing</a>
             </li>
-            <li class="service__item center">
+            <li class="service__list center">
               <a href="#">Planning</a>
             </li>
-            <li class="service__item right">
+            <li class="service__list right">
               <a href="#">Direction</a>
             </li>
           </ul>
@@ -167,18 +156,12 @@
       <!-- ここから Contact -->
       <section id="contact" class="contact">
         <div class="contact__wrap">
-          <div class="main__flex --contact">
-            <h2 class="contact__ttl">Contact</h2>
-            <div class="main__right borderWhite"></div>
+          <h2 class="main__ttl white right">Contact</h2>
+          <div class="marginTop70 marginBottom30">
+            <p class="contact__txt">お気軽にご相談ください。</p>
           </div>
-          <p class="contact__txt">お気軽にご相談ください。</p>
           <div class="btn--center">
-            <button
-              onclick="location.href='./contact.html'"
-              class="btn btn--yellow"
-            >
-              <p class="btn__txt">Contact</p>
-            </button>
+            <a href="contact.html" class="btn btn--yellow">Contact</a>
           </div>
           <p class="main__txt --left2">Contact us</p>
         </div>
