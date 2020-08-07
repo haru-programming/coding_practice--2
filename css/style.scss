@@ -43,9 +43,6 @@ body {
 .marginTop70 {
   margin-top: 70px;
 }
-.marginBottom30 {
-  margin-bottom: 30px;
-}
 
 //******全ページ共通ボタン******
 .btn {
@@ -68,6 +65,7 @@ body {
 
   &--center {
     text-align: center;
+    margin-top: 30px;
   }
 }
 
