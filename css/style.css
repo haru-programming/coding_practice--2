@@ -20,7 +20,10 @@ body {
 }
 
 .btn {
-  padding: 19px 71px 18px 71px;
+  display: inline-block;
+  width: 235px;
+  height: 59px;
+  line-height: 59px;
   -webkit-box-shadow: 0 0 6px #1b1310;
           box-shadow: 0 0 6px #1b1310;
   border-radius: 51px;

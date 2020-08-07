@@ -6,7 +6,10 @@
 }
 
 .btn {
-  padding: 19px 71px 19px 71px;
+  display: inline-block;
+  width: 235px;
+  height: 59px;
+  line-height: 59px;
   -webkit-box-shadow: 0 0 6px #1b1310;
           box-shadow: 0 0 6px #1b1310;
   border-radius: 51px;
@@ -188,7 +191,6 @@ body {
 
 @media screen and (max-width: 767px) {
   .nav2 {
-    display: block;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -218,14 +220,14 @@ body {
     width: 100vw;
     height: 100vh;
   }
-  .nav2__list {
+  .nav2__item {
     font-size: 16px;
     font-weight: bold;
     font-style: italic;
     list-style: none;
     text-align: center;
   }
-  .nav2__list a {
+  .nav2__item a {
     text-decoration: none;
     color: white;
   }
@@ -237,6 +239,7 @@ body {
 .nav2.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  display: block;
 }
 
 .fv {
@@ -295,19 +298,18 @@ body {
 
 .contact {
   font-family: "Noto Serif JP", sans-serif;
-  margin-top: 100px;
 }
 
 @media screen and (max-width: 767px) {
   .contact {
-    overflow: hidden;
-    margin: 4vw;
+    margin: 0 4vw;
   }
 }
 
 .contact__ttl {
   font-size: 16px;
   font-weight: bold;
+  margin-top: 100px;
 }
 
 .contact__item {
@@ -335,14 +337,12 @@ body {
 
 .contact__wrap {
   width: 700px;
-  height: 630px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
   .contact__wrap {
     width: 100%;
-    height: 100vh;
   }
 }
 
@@ -367,6 +367,7 @@ body {
 
 .checkbox__item {
   list-style: none;
+  margin-left: 1px;
 }
 
 @media screen and (max-width: 767px) {
