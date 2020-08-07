@@ -15,10 +15,6 @@ body {
   margin-top: 70px;
 }
 
-.marginBottom30 {
-  margin-bottom: 30px;
-}
-
 .btn {
   display: inline-block;
   width: 235px;
@@ -41,6 +37,7 @@ body {
 
 .btn--center {
   text-align: center;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 767px) {
